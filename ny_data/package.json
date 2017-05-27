@@ -1,0 +1,21 @@
+{
+  "name": "layer_run",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "layer": "^0.1.0"
+  },
+  "dependencies": {
+    "commander": "^2.9.0",
+    "mysql": "^2.13.0",
+    "request-promise": "^4.2.0",
+    "sequelize": "^3.30.4",
+    "sqlite3": "^3.1.8"
+  }
+}

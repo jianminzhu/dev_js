@@ -1,0 +1,45 @@
+{
+  "remote": {
+    "dbname": "bdm272724254_db",
+    "dbuser": "bdm272724254",
+    "dbpwd": "bdm272724254db",
+    "opt": {
+      "dialect": "mysql",
+      "host": "101.201.37.134",
+      "pool": {
+        "max": 5,
+        "min": 0,
+        "idle": 10000
+      },
+      "insecureAuth": true
+    }
+  },
+  "local": {
+    "dbname": "test2",
+    "dbuser": "root",
+    "dbpwd": "root",
+    "opt": {
+      "dialect": "mysql",
+      "host": "10.136.115.203",
+      "pool": {
+        "max": 5,
+        "min": 0,
+        "idle": 10000
+      }
+    }
+  },
+  "sqlite3": {
+    "dbname": "sqlite3",
+    "dbuser": "root",
+    "dbpwd": "root",
+    "opt": {
+      "dialect": "sqlite",
+      "pool": {
+        "max": 5,
+        "min": 0,
+        "idle": 10000
+      },
+      "storage": "test.db"
+    }
+  }
+}

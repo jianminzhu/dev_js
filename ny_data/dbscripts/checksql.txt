@@ -1,0 +1,15 @@
+SELECT COUNT(*) ,v,dt FROM ps GROUP BY v,dt  HAVING COUNT(*)>1 
+SELECT * FROM ps WHERE dt IN('2017-04-24 12:13:53','2017-04-24 12:14:02','2017-04-24 12:14:07','2017-04-24 13:27:10','2017-04-24 14:04:56')
+
+
+DELETE 
+FROM
+  ps 
+WHERE id IN 
+  (SELECT pp.* FROM ( SELECT 
+    MAX(id) AS id 
+  FROM
+    ps 
+  GROUP BY v,
+    dt 
+  HAVING COUNT(*) > 1) AS pp   )
