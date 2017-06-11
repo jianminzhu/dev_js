@@ -9,7 +9,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "layer": "^0.1.0"
+    "cheerio": "^0.22.0",
+    "layer": "^0.1.0",
+    "moment": "^2.18.1",
+    "promise": "^7.1.1",
+    "q": "^1.5.0"
   },
   "dependencies": {
     "commander": "^2.9.0",
