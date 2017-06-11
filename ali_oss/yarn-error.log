@@ -1,0 +1,40 @@
+Arguments: 
+  T:\dev_lib\_env_\env\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add ali-oss
+
+PATH: 
+  C:\Program Files\Docker\Docker\Resources\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\WIDCOMM\Bluetooth Software\syswow64;C:\Program Files\TortoiseGit\bin;C:\Program Files (x86)\Yarn\bin;C:\tools\Git\cmd;C:\Program Files\Oracle\VirtualBox\;.;T:\dev_lib\_env_\;T:\dev_lib\_env_\env\Subversion;T:\dev_lib\_env_\env\rust64\bin;T:\dev_lib\_env_\env\python2;T:\dev_lib\_env_\env\python2\scripts;T:\dev_lib\_env_\env\python2;T:\dev_lib\_env_\env\php;T:\dev_lib\_env_\env\nodejs;C:\Users\learn\AppData\Roaming\npm;T:\dev_lib\_env_\env\maven\bin;z:\dev_lib\jdk1.8.0_74_x64\bin;z:\dev_lib\jdk1.8.0_74_x64\bin;T:\dev_lib\_env_\env\gradle\bin;T:\dev_lib\_env_\env\go64\bin;T:\dev_lib\_env_\env\git\bin;T:\dev_lib\_env_\env\fmpp\bin;T:\dev_lib\_env_\env\ant\bin;"""""";C:\Users\learn\AppData\Local\Yarn\.bin;C:\_zhu\tools\DockerToolbox
+
+Yarn version: 
+  0.21.3
+
+Node version: 
+  6.0.0
+
+Platform: 
+  win32 x64
+
+npm manifest: 
+  {
+    "name": "layer_run",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+      "layer": "^0.1.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: EEXIST: file already exists, mkdir 'C:\Users\learn\Desktop\layer_run\node_modules\ali-oss'
+      at Error (native)

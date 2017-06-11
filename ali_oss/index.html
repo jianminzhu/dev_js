@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Untitled</title>
+	<script type="text/javascript" charset="utf-8" src=http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js>
+		
+	</script>
+	<script type="text/javascript" charset="utf-8">
+		$(function(){
+		$("#query").click(function(){
+		    TestAjax()
+		})
+		function TestAjax()
+ {
+    $.ajax({
+        type : "get",
+        async : false,
+        url : "a.json", //实际上访问时产生的地址为: ajax.ashx?callbackfun=jsonpCallback&id=10
+        data : {id : 10},
+        cache : false, 
+        dataType : "jsonp",
+        jsonp: "callbackfun", 
+        jsonpCallback:"aa", 
+        success : function(json){
+            alert(JSON.stringify(json));
+        },
+        error:function(){
+            alert("erroe");
+        }
+    });
+}
+		})
+	</script>
+	
+</head>
+
+<body>
+<label for="query">query</label><input type="button" name="query" value="" id="query"/>
+Hello World!
+
+</body>
+</html>
