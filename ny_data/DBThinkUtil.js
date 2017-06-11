@@ -1,12 +1,12 @@
 "use strict";
+var Mysql = require('node-mysql-promise');
 var DBThinkUtil = (function () {
     /**
      *
      * @param config   示例{  host, user ,  port , database , password  }
      */
     function DBThinkUtil(config) {
-        this.Mysql = require('node-mysql-promise');
-        this._mysql = this.Mysql.createConnection(config);
+        this._mysql = Mysql.createConnection(config);
     }
     DBThinkUtil.prototype.toDb = function (table, data) {
         if (data instanceof Array) {

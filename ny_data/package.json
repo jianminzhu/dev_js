@@ -12,6 +12,7 @@
     "cheerio": "^0.22.0",
     "layer": "^0.1.0",
     "moment": "^2.18.1",
+    "node-mysql-promise": "0.0.6",
     "promise": "^7.1.1",
     "q": "^1.5.0"
   },

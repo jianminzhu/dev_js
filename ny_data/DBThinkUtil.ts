@@ -1,25 +1,28 @@
+var Mysql = require('node-mysql-promise');
 export class DBThinkUtil {
-    Mysql = require('node-mysql-promise');
     private _mysql
+
     /**
      *
      * @param config   Ê¾Àý{  host, user ,  port , database , password  }
      */
     constructor(config) {
-        this._mysql = this.Mysql.createConnection(config);
+        this._mysql = Mysql.createConnection(config);
     }
 
-    toDb  (table, data) {
-        if (  data  instanceof Array ) {
+    toDb(table, data) {
+        if (data instanceof Array) {
             return this._mysql.table(table).addAll(data)
         } else {
             return this._mysql.table(table).add(data)
         }
     }
-    m(table){
+
+    m(table) {
         return this._mysql.table(table);
     }
-    mysql(){
+
+    mysql() {
         return this._mysql;
     }
 
