@@ -40,7 +40,7 @@ export class DBUtil {
 
     count(p) {
         var v = this;
-        return v.P.count({where: {v: p.v, dt: {$gt: new Date(p.date)}}})
+        return v.P.count({where: {v: p.v, dt: {$gt: new Date(p.date)}}},{logging:false})
     }
 }
 module.exports.DBUtil = DBUtil;

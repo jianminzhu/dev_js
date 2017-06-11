@@ -11,7 +11,7 @@ var NyInstance = (function () {
         if (profile === void 0) { profile = "local"; }
         var dbConfig = this.db_profile[profile];
         var db = new DB_1.DBUtil(dbConfig);
-        console.log("using db ", JSON.stringify(dbConfig));
+        // console.log("using db ", JSON.stringify(dbConfig))
         db.initTables().then(function () {
             setInterval(function () {
                 NyUtil_1.NYUtil.p().then(function (p) {
@@ -19,13 +19,13 @@ var NyInstance = (function () {
                         var isNeedInsert = true;
                         if (i == 0) {
                             db.add(p).then(function (it) {
-                                console.log(it);
+                                // console.log(it)
                             });
                         }
                         else {
                             isNeedInsert = false;
                         }
-                        console.log(isNeedInsert, p.p, p.v, p.date + " " + p.time, dbConfig.dbname);
+                        // console.log(isNeedInsert, p.p, p.v, p.date + " " + p.time,dbConfig.dbname)
                     });
                 });
             }, 1000);

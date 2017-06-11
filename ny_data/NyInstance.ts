@@ -8,7 +8,7 @@ export class NyInstance {
     run(profile="local") {
         let dbConfig = this.db_profile[profile];
         var db = new DBUtil(dbConfig);
-        console.log("using db ", JSON.stringify(dbConfig))
+        // console.log("using db ", JSON.stringify(dbConfig))
         db.initTables().then(function () {
             setInterval(function () {
                 NYUtil.p().then(function (p) {
@@ -16,13 +16,13 @@ export class NyInstance {
                         var isNeedInsert = true;
                         if (i == 0) {
                             db.add(p).then(function (it) {
-                                console.log(it)
+                                // console.log(it)
                             })
                         } else {
                             isNeedInsert = false;
 
                         }
-                        console.log(isNeedInsert, p.p, p.v, p.date + " " + p.time,dbConfig.dbname)
+                        // console.log(isNeedInsert, p.p, p.v, p.date + " " + p.time,dbConfig.dbname)
                     })
                 })
 
