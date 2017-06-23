@@ -12,18 +12,18 @@ export class CheerioUtil {
         return new Promise(function (resolve, reject) {
             v.http.get(url, function (res) {
                 var body = '';
-                //µ±½ÓÊÜµ½Êı¾İµÄÊ±ºò£¬httpÊÇÖ´ĞĞ·¶Î§ÇëÇóµÄ¡£ËùÒÔÃ¿¸ö·¶Î§ÇëÇó¾ÍÊÇÒ»¸öchunk¡£
+                //å½“æ¥å—åˆ°æ•°æ®çš„æ—¶å€™ï¼Œhttpæ˜¯æ‰§è¡ŒèŒƒå›´è¯·æ±‚çš„ã€‚æ‰€ä»¥æ¯ä¸ªèŒƒå›´è¯·æ±‚å°±æ˜¯ä¸€ä¸ªchunkã€‚
                 res.on('data', function (chunk) {
-                    //bufferÊÇÒ»ÖÖnode´¦Àí¶ş½øÖÆĞÅÏ¢µÄ¸ñÊ½£¬²»±ØÀí»á¡£
-                    res.setEncoding('utf8'); //ÉèÖÃbuffer×Ö·û¼¯
-                    body += chunk; //Æ´½Óbuffer
+                    //bufferæ˜¯ä¸€ç§nodeå¤„ç†äºŒè¿›åˆ¶ä¿¡æ¯çš„æ ¼å¼ï¼Œä¸å¿…ç†ä¼šã€‚
+                    res.setEncoding('utf8'); //è®¾ç½®bufferå­—ç¬¦é›†
+                    body += chunk; //æ‹¼æ¥buffer
                 });
-                //µ±Õû¸öhttpÇëÇó½áÊøµÄÊ±ºò
+                //å½“æ•´ä¸ªhttpè¯·æ±‚ç»“æŸçš„æ—¶å€™
                 res.on('end', function () {
-                    //³É¹¦µÄ×´Ì¬Ê¹ÓÃresolve»Øµ÷º¯Êı¡£
+                    //æˆåŠŸçš„çŠ¶æ€ä½¿ç”¨resolveå›è°ƒå‡½æ•°ã€‚
                     resolve(coverF(v.cheerio.load(body), params, body));
                 });
-                //µ±Ö´ĞĞhttpÇëÇóÊ§°ÜµÄÊ±ºò£¬·µ»Ø´íÎóĞÅÏ¢
+                //å½“æ‰§è¡Œhttpè¯·æ±‚å¤±è´¥çš„æ—¶å€™ï¼Œè¿”å›é”™è¯¯ä¿¡æ¯
                 res.on('error', function (e) {
                     reject(e.message);
                 });
