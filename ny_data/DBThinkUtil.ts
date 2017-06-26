@@ -4,7 +4,7 @@ export class DBThinkUtil {
 
     /**
      *
-     * @param config   Ê¾Àý{  host, user ,  port , database , password  }
+     * @param config   ç¤ºä¾‹{  host, user ,  port , database , password  }
      */
     constructor(config) {
         this._mysql = Mysql.createConnection(config);
@@ -28,6 +28,8 @@ export class DBThinkUtil {
 
 }
 module.exports.DBThinkUtil = DBThinkUtil;
+
+
 
 
 
