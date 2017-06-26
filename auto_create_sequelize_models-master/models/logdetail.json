@@ -1,0 +1,58 @@
+{
+  "id": {
+    "type": "int(11)",
+    "allowNull": false,
+    "defaultValue": null,
+    "primaryKey": true,
+    "comment": null
+  },
+  "logid": {
+    "type": "int(11)",
+    "allowNull": false,
+    "defaultValue": null,
+    "primaryKey": false,
+    "comment": null
+  },
+  "level": {
+    "type": "enum('5minutely','hourly','daily')",
+    "allowNull": false,
+    "defaultValue": null,
+    "primaryKey": false,
+    "comment": null
+  },
+  "time": {
+    "type": "datetime",
+    "allowNull": false,
+    "defaultValue": null,
+    "primaryKey": false,
+    "comment": null
+  },
+  "health": {
+    "type": "int(11)",
+    "allowNull": false,
+    "defaultValue": "0",
+    "primaryKey": false,
+    "comment": null
+  },
+  "healthType": {
+    "type": "enum('manual','auto')",
+    "allowNull": false,
+    "defaultValue": "auto",
+    "primaryKey": false,
+    "comment": null
+  },
+  "updateTime": {
+    "type": "datetime",
+    "allowNull": true,
+    "defaultValue": null,
+    "primaryKey": false,
+    "comment": null
+  },
+  "logSize": {
+    "type": "bigint(20)",
+    "allowNull": true,
+    "defaultValue": null,
+    "primaryKey": false,
+    "comment": null
+  }
+}

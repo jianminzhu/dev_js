@@ -1,0 +1,100 @@
+{
+  "id": {
+    "type": "int(11)",
+    "allowNull": false,
+    "defaultValue": null,
+    "primaryKey": true,
+    "comment": "编号"
+  },
+  "dimg_nick_name": {
+    "type": "varchar(256)",
+    "allowNull": true,
+    "defaultValue": null,
+    "primaryKey": false,
+    "comment": "用户自定义镜像名称"
+  },
+  "dimg_name": {
+    "type": "varchar(256)",
+    "allowNull": false,
+    "defaultValue": null,
+    "primaryKey": false,
+    "comment": "真实构建镜像名称"
+  },
+  "dimg_build_param_jsonstr": {
+    "type": "text",
+    "allowNull": false,
+    "defaultValue": null,
+    "primaryKey": false,
+    "comment": "镜像构建相关参数"
+  },
+  "dimg_version": {
+    "type": "varchar(128)",
+    "allowNull": true,
+    "defaultValue": "1.0",
+    "primaryKey": false,
+    "comment": "版本号"
+  },
+  "dimg_build_status": {
+    "type": "enum('INIT','BUILDING','TESTING','PUSHING','SUCC','FAILED')",
+    "allowNull": true,
+    "defaultValue": null,
+    "primaryKey": false,
+    "comment": null
+  },
+  "docker_file": {
+    "type": "text",
+    "allowNull": true,
+    "defaultValue": null,
+    "primaryKey": false,
+    "comment": "生成的dockerfile内容"
+  },
+  "task_create_time": {
+    "type": "timestamp",
+    "allowNull": false,
+    "defaultValue": "CURRENT_TIMESTAMP",
+    "primaryKey": false,
+    "comment": "创建时间"
+  },
+  "user_name": {
+    "type": "varchar(100)",
+    "allowNull": true,
+    "defaultValue": null,
+    "primaryKey": false,
+    "comment": "创建人"
+  },
+  "attation_users": {
+    "type": "text",
+    "allowNull": false,
+    "defaultValue": null,
+    "primaryKey": false,
+    "comment": "关注人列表\",\"隔开的邮件"
+  },
+  "run_status": {
+    "type": "varchar(256)",
+    "allowNull": true,
+    "defaultValue": null,
+    "primaryKey": false,
+    "comment": "任务运行状态(fail,stop,runing,wait,next)"
+  },
+  "wait_reason": {
+    "type": "mediumtext",
+    "allowNull": true,
+    "defaultValue": null,
+    "primaryKey": false,
+    "comment": "wait原因描述"
+  },
+  "upload_file": {
+    "type": "varchar(200)",
+    "allowNull": true,
+    "defaultValue": null,
+    "primaryKey": false,
+    "comment": null
+  },
+  "context": {
+    "type": "text",
+    "allowNull": true,
+    "defaultValue": null,
+    "primaryKey": false,
+    "comment": null
+  }
+}

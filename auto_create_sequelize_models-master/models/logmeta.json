@@ -1,0 +1,30 @@
+{
+  "name": {
+    "type": "varchar(80)",
+    "allowNull": false,
+    "defaultValue": "",
+    "primaryKey": true,
+    "comment": "name of log"
+  },
+  "hdfsPath": {
+    "type": "varchar(200)",
+    "allowNull": false,
+    "defaultValue": "",
+    "primaryKey": false,
+    "comment": "path of log"
+  },
+  "localPath": {
+    "type": "varchar(200)",
+    "allowNull": false,
+    "defaultValue": "",
+    "primaryKey": false,
+    "comment": "local path, is exists"
+  },
+  "health": {
+    "type": "smallint(4)",
+    "allowNull": false,
+    "defaultValue": "100",
+    "primaryKey": false,
+    "comment": "threshould for log vary"
+  }
+}

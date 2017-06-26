@@ -1,0 +1,219 @@
+{
+  "Id": {
+    "type": "int(11)",
+    "allowNull": false,
+    "defaultValue": null,
+    "primaryKey": true,
+    "comment": null
+  },
+  "taskid": {
+    "type": "int(11)",
+    "allowNull": false,
+    "defaultValue": "0",
+    "primaryKey": false,
+    "comment": null
+  },
+  "groupName": {
+    "type": "varchar(50)",
+    "allowNull": false,
+    "defaultValue": "测试组",
+    "primaryKey": false,
+    "comment": null
+  },
+  "image": {
+    "type": "varchar(500)",
+    "allowNull": false,
+    "defaultValue": "",
+    "primaryKey": false,
+    "comment": null
+  },
+  "version": {
+    "type": "varchar(100)",
+    "allowNull": false,
+    "defaultValue": "",
+    "primaryKey": false,
+    "comment": null
+  },
+  "command": {
+    "type": "varchar(1000)",
+    "allowNull": false,
+    "defaultValue": "",
+    "primaryKey": false,
+    "comment": null
+  },
+  "memory": {
+    "type": "varchar(255)",
+    "allowNull": false,
+    "defaultValue": "2g",
+    "primaryKey": false,
+    "comment": null
+  },
+  "workDir": {
+    "type": "varchar(500)",
+    "allowNull": false,
+    "defaultValue": "",
+    "primaryKey": false,
+    "comment": null
+  },
+  "volume": {
+    "type": "varchar(500)",
+    "allowNull": false,
+    "defaultValue": "",
+    "primaryKey": false,
+    "comment": null
+  },
+  "clusterUgi": {
+    "type": "varchar(500)",
+    "allowNull": false,
+    "defaultValue": "slave,slave",
+    "primaryKey": false,
+    "comment": "集群用户，密码"
+  },
+  "time": {
+    "type": "varchar(30)",
+    "allowNull": false,
+    "defaultValue": "",
+    "primaryKey": false,
+    "comment": null
+  },
+  "state": {
+    "type": "enum('DEAD','WAIT','LOCK','RUN','SUCC','FAIL','CANCEL','TIMEOUT','SUBMITTING','CHANGE')",
+    "allowNull": false,
+    "defaultValue": "DEAD",
+    "primaryKey": false,
+    "comment": null
+  },
+  "logs": {
+    "type": "varchar(255)",
+    "allowNull": false,
+    "defaultValue": "",
+    "primaryKey": false,
+    "comment": "多种日志用逗号分开"
+  },
+  "logsize": {
+    "type": "bigint(20)",
+    "allowNull": false,
+    "defaultValue": "0",
+    "primaryKey": false,
+    "comment": null
+  },
+  "relyTasks": {
+    "type": "varchar(255)",
+    "allowNull": false,
+    "defaultValue": "",
+    "primaryKey": false,
+    "comment": null
+  },
+  "runCount": {
+    "type": "smallint(6)",
+    "allowNull": false,
+    "defaultValue": "0",
+    "primaryKey": false,
+    "comment": null
+  },
+  "queuedTime": {
+    "type": "datetime",
+    "allowNull": false,
+    "defaultValue": "2016-09-07 20:33:00",
+    "primaryKey": false,
+    "comment": null
+  },
+  "startTime": {
+    "type": "datetime",
+    "allowNull": true,
+    "defaultValue": "2011-01-01 00:00:00",
+    "primaryKey": false,
+    "comment": "????????"
+  },
+  "endTime": {
+    "type": "datetime",
+    "allowNull": true,
+    "defaultValue": "2011-01-02 00:00:00",
+    "primaryKey": false,
+    "comment": "????????"
+  },
+  "executor": {
+    "type": "varchar(15)",
+    "allowNull": false,
+    "defaultValue": "",
+    "primaryKey": false,
+    "comment": null
+  },
+  "emails": {
+    "type": "varchar(200)",
+    "allowNull": false,
+    "defaultValue": "",
+    "primaryKey": false,
+    "comment": "多个地址用逗号分开"
+  },
+  "noticeType": {
+    "type": "enum('ON_FAIL','ON_SUCC','ON_ANY')",
+    "allowNull": false,
+    "defaultValue": "ON_FAIL",
+    "primaryKey": false,
+    "comment": null
+  },
+  "name": {
+    "type": "varchar(50)",
+    "allowNull": false,
+    "defaultValue": "crontask",
+    "primaryKey": false,
+    "comment": null
+  },
+  "timeout": {
+    "type": "int(11)",
+    "allowNull": false,
+    "defaultValue": "0",
+    "primaryKey": false,
+    "comment": "以秒为单位"
+  },
+  "estimateCost": {
+    "type": "int(11) unsigned",
+    "allowNull": false,
+    "defaultValue": "120",
+    "primaryKey": false,
+    "comment": "job预估时间（分钟）"
+  },
+  "urgentPeriod": {
+    "type": "smallint(6)",
+    "allowNull": false,
+    "defaultValue": null,
+    "primaryKey": false,
+    "comment": "以小时为单位"
+  },
+  "user": {
+    "type": "varchar(50)",
+    "allowNull": false,
+    "defaultValue": "sogou",
+    "primaryKey": false,
+    "comment": null
+  },
+  "history": {
+    "type": "text",
+    "allowNull": true,
+    "defaultValue": null,
+    "primaryKey": false,
+    "comment": null
+  },
+  "applicationid": {
+    "type": "varchar(50)",
+    "allowNull": false,
+    "defaultValue": "",
+    "primaryKey": false,
+    "comment": null
+  },
+  "priority": {
+    "type": "int(11)",
+    "allowNull": false,
+    "defaultValue": "10",
+    "primaryKey": false,
+    "comment": null
+  },
+  "dockerCmd": {
+    "type": "text",
+    "allowNull": true,
+    "defaultValue": null,
+    "primaryKey": false,
+    "comment": null
+  }
+}

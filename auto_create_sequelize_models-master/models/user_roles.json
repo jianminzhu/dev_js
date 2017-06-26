@@ -1,0 +1,23 @@
+{
+  "user_role_id": {
+    "type": "bigint(20)",
+    "allowNull": false,
+    "defaultValue": null,
+    "primaryKey": true,
+    "comment": null
+  },
+  "role": {
+    "type": "varchar(255)",
+    "allowNull": false,
+    "defaultValue": null,
+    "primaryKey": false,
+    "comment": null
+  },
+  "username": {
+    "type": "varchar(25)",
+    "allowNull": false,
+    "defaultValue": null,
+    "primaryKey": false,
+    "comment": null
+  }
+}

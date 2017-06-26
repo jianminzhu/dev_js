@@ -1,0 +1,198 @@
+{
+  "Id": {
+    "type": "int(11)",
+    "allowNull": false,
+    "defaultValue": null,
+    "primaryKey": true,
+    "comment": "任务id"
+  },
+  "name": {
+    "type": "varchar(50)",
+    "allowNull": false,
+    "defaultValue": "crontask",
+    "primaryKey": false,
+    "comment": null
+  },
+  "groupName": {
+    "type": "varchar(100)",
+    "allowNull": false,
+    "defaultValue": "测试组",
+    "primaryKey": false,
+    "comment": null
+  },
+  "image": {
+    "type": "varchar(500)",
+    "allowNull": false,
+    "defaultValue": "",
+    "primaryKey": false,
+    "comment": "image名称"
+  },
+  "version": {
+    "type": "varchar(500)",
+    "allowNull": false,
+    "defaultValue": "latest",
+    "primaryKey": false,
+    "comment": "image版本"
+  },
+  "command": {
+    "type": "varchar(500)",
+    "allowNull": false,
+    "defaultValue": "",
+    "primaryKey": false,
+    "comment": "执行脚本"
+  },
+  "timeFormat": {
+    "type": "varchar(30)",
+    "allowNull": false,
+    "defaultValue": "",
+    "primaryKey": false,
+    "comment": "时间格式"
+  },
+  "cronTime": {
+    "type": "varchar(20)",
+    "allowNull": false,
+    "defaultValue": "1",
+    "primaryKey": false,
+    "comment": "定时规则"
+  },
+  "subMin": {
+    "type": "varchar(30)",
+    "allowNull": false,
+    "defaultValue": "-0",
+    "primaryKey": false,
+    "comment": "延迟时间"
+  },
+  "workDir": {
+    "type": "varchar(500)",
+    "allowNull": true,
+    "defaultValue": "",
+    "primaryKey": false,
+    "comment": null
+  },
+  "volume": {
+    "type": "varchar(500)",
+    "allowNull": true,
+    "defaultValue": "",
+    "primaryKey": false,
+    "comment": null
+  },
+  "memory": {
+    "type": "varchar(200)",
+    "allowNull": false,
+    "defaultValue": "",
+    "primaryKey": false,
+    "comment": "内存设置"
+  },
+  "clusterUgi": {
+    "type": "varchar(500)",
+    "allowNull": false,
+    "defaultValue": "",
+    "primaryKey": false,
+    "comment": "集群用户，密码"
+  },
+  "logs": {
+    "type": "varchar(1000)",
+    "allowNull": true,
+    "defaultValue": "",
+    "primaryKey": false,
+    "comment": "依赖日志列表"
+  },
+  "relyTasks": {
+    "type": "varchar(255)",
+    "allowNull": true,
+    "defaultValue": "",
+    "primaryKey": false,
+    "comment": "依赖任务列表"
+  },
+  "state": {
+    "type": "enum('DEAD','INIT','RUN','DELETE','UPDATE')",
+    "allowNull": false,
+    "defaultValue": "DEAD",
+    "primaryKey": false,
+    "comment": "任务状态"
+  },
+  "emails": {
+    "type": "varchar(200)",
+    "allowNull": false,
+    "defaultValue": "",
+    "primaryKey": false,
+    "comment": "关注人列表"
+  },
+  "emailsGroup": {
+    "type": "varchar(200)",
+    "allowNull": false,
+    "defaultValue": "",
+    "primaryKey": false,
+    "comment": "关注邮件组"
+  },
+  "noticeType": {
+    "type": "varchar(255)",
+    "allowNull": false,
+    "defaultValue": "ON_FAIL",
+    "primaryKey": false,
+    "comment": "报警规则"
+  },
+  "priority": {
+    "type": "smallint(6)",
+    "allowNull": false,
+    "defaultValue": "60",
+    "primaryKey": false,
+    "comment": "优先级"
+  },
+  "timeout": {
+    "type": "int(11)",
+    "allowNull": false,
+    "defaultValue": "172800",
+    "primaryKey": false,
+    "comment": "超时时间以秒为单位"
+  },
+  "urgentPeriod": {
+    "type": "smallint(6)",
+    "allowNull": false,
+    "defaultValue": "0",
+    "primaryKey": false,
+    "comment": "以小时为单位"
+  },
+  "user": {
+    "type": "varchar(50)",
+    "allowNull": false,
+    "defaultValue": "sogou",
+    "primaryKey": false,
+    "comment": null
+  },
+  "cronTimeAlert": {
+    "type": "varchar(20)",
+    "allowNull": true,
+    "defaultValue": "0 0 0 * * ?",
+    "primaryKey": false,
+    "comment": "报警期限，已采用estimateCost形式"
+  },
+  "estimateCost": {
+    "type": "int(5) unsigned",
+    "allowNull": false,
+    "defaultValue": "120",
+    "primaryKey": false,
+    "comment": "任务预估耗时（分钟）"
+  },
+  "limitDate": {
+    "type": "datetime",
+    "allowNull": true,
+    "defaultValue": null,
+    "primaryKey": false,
+    "comment": "任务停止调度日期"
+  },
+  "type": {
+    "type": "enum('CRONTASK','SIMPLETASK')",
+    "allowNull": false,
+    "defaultValue": "SIMPLETASK",
+    "primaryKey": false,
+    "comment": "任务类型：简单任务 定时任务"
+  },
+  "description": {
+    "type": "text",
+    "allowNull": true,
+    "defaultValue": null,
+    "primaryKey": false,
+    "comment": "任务描述"
+  }
+}
