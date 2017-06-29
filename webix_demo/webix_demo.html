@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html>
+   <head>
+       <link rel="stylesheet" href="webix.css?v=4.4.0" type="text/css" charset="utf-8">
+       <script src="webix.js?v=4.4.0" type="text/javascript" charset="utf-8"></script>
+       <title>Layout and Resizer</title>
+   </head>
+   <body>
+       <div id='layout_div' style='width:600px; height:600px; margin:20px;'></div>
+       <script type="text/javascript" charset="utf-8">
+
+           webix.ui({
+               container:"layout_div",
+               id:"layout",
+               height:550,
+               width:1200,
+               rows:[
+                   {template:"row 1", height:35 },
+                   {template:"row 1"},
+                   {view:"resizer"},
+                   {template:"row 2"},
+                   {view:"resizer"},
+                   {cols:[
+                       {
+                         
+                           template:"column 1",
+                           width:250
+                       },
+                       {
+                           view:"resizer",
+                         
+                             width:250
+                       },
+                       {   
+                           view:"resizer",
+                           template:"column 2 ddddddddddd",
+                             width:250
+                       },
+                       {
+                           view:"resizer",
+                           template:"column 3",
+                             width:250
+                       }
+                   ]
+                   }
+               ]
+           }).show();
+
+       </script>
+   </body>
+</html>
+ 
