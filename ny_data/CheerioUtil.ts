@@ -7,8 +7,8 @@ export class CheerioUtil {
         this.cheerio = require('cheerio');
     }
 
-    parseUrl(url, params = {}, coverF) {
-        var v = this
+    getUrl(url, params = {}) {
+        var v = this;
         return new Promise(function (resolve, reject) {
             v.http.get(url, function (res) {
                 var body = '';
@@ -21,13 +21,24 @@ export class CheerioUtil {
                 //当整个http请求结束的时候
                 res.on('end', function () {
                     //成功的状态使用resolve回调函数。
-                    resolve(coverF(v.cheerio.load(body), params, body));
+                    resolve(body);
                 });
                 //当执行http请求失败的时候，返回错误信息
                 res.on('error', function (e) {
-                    reject(e.message);
+                    reject(e );
                 });
             });
+        });
+    }
+
+    parseUrl(url, params = {}, coverF) {
+        var v = this
+        return new Promise(function (resolve, reject) {
+            v.getUrl(url, params).then( body=> {
+                resolve(coverF(v.cheerio.load(body), params, body))
+            },err=>{
+                reject(err)
+            })
         });
     }
 }
